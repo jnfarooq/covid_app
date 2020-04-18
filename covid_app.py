@@ -1,8 +1,6 @@
 import numpy as np 
 import streamlit as st 
 import matplotlib.pyplot as plt 
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import AdaBoostRegressor
 from PIL import Image
 import os
 import glob
@@ -49,7 +47,6 @@ def load_page():
     # st.write(files)
     _, y, _ = learn_inf.predict(fname)
     # print(type(y.values().cpu()))
-    
 
 
     if st.button('Classify'):
@@ -90,49 +87,5 @@ def load_page():
         show_heatmap(mult, xb_im)
         st.pyplot()
 
-
-
-
-        # file_buffer = get_image()
-        # st.write(file_buffer)
-
-        # image = np.array(Image.open(file_buffer))
-        # st.write(image)
-        # st.write('Waiting for the image')
-        # st.image(image.astype(np.uint8),caption=['Resized Image'], width=150)
-        # st.write('Done')
-
-# def get_image():
-#     '''
-#      Displays radio options to upload images either from url or local machine
-     
-#      Returns:
-#          Image numpy array
-#     '''
-#     options = ['local machine','url', ]
-#     upload = st.radio("Upload image from", options, index=0)
-#     if upload == options[0]:
-#         url = st.text_input('Enter url')
-#         if url:
-#             image = utils.url_to_image(url)
-#             return image, url
-#     elif upload == options[1]:
-#         file_buffer = st.file_uploader("Upload image", type=["png", "jpg", "jpeg"])
-#         if file_buffer:
-#             # to PIL image obj and to np array for easy processing
-#             image = np.array(PIL.Image.open(file_buffer))
-#             return file_buffer
-
 load_page()
 
-# img_file_buffer = st.file_uploader('upload an image', type=["png", "jpg", "jpeg"])
-# st.write(img_file_buffer)
-# # img = Image.open(img_file_buffer)
-# # image = np.array(img)
-# if img_file_buffer is not None:
-#     st.write('something is happenind')
-#     image = Image.open(img_file_buffer)
-#     img_array = np.array(image) # if you want to pass it to OpenCV
-#     st.image(image, caption="The caption", use_column_width=True)
-#     # plt.imshow(img_array)
-#     # st.pyplot()
