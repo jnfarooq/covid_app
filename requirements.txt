@@ -1,5 +1,5 @@
-https://download.pytorch.org/whl/cpu/torch-1.5.0-cp37-cp37m-linux_x86_64.whl
-https://download.pytorch.org/whl/cpu/torchvision-0.6.0-cp37-cp37m-linux_x86_64.whl
+torch==1.5.0+cpu 
+torchvision==0.6.0+cpu
 fastai2
 streamlit==0.57.3
 
