@@ -18,7 +18,7 @@ st.write('Hey, whats up')
 # st.image(image, caption='test image', use_column_width=True)
 st.cache()
 def load_model():
-    return load_learner('export_18.pkl')
+    return load_learner('squeezenet.pkl')
 
 def hooked_backward(cat, m, xb):
     with hook_output(m[0]) as hook_a: 
@@ -31,7 +31,7 @@ def show_heatmap(hm, xb_im):
     _,ax = plt.subplots()
     xb_im.show(ctx=ax)
     ax.imshow(hm, alpha=0.6, extent=(0,n,n,0),
-              interpolation='bilinear', cmap='magma')
+              interpolation='bilinear', cmap='OrRd')
 
 
 def load_page():
