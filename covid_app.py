@@ -14,7 +14,7 @@ label_dict = {0:'COVID-19',
                 2:'Viral Pneumonia'}
 
 st.title('Uploaded Image')
-st.write('Hey, whats up')
+#st.write('Hey, whats up')
 # image = Image.open('12.png')
 # st.image(image, caption='test image', use_column_width=True)
 st.cache()
@@ -63,7 +63,7 @@ def load_page():
         b = db.test_dl([fname]).one_batch()
         xb = b[0]
         xb_im = TensorImage(db.train.decode(b)[0][0])
-        print(xb_im.shape)
+        #print(xb_im.shape)
 
         # xb.shape
         # st.write(f'{xb.shape}')
