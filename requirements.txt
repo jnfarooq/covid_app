@@ -1,4 +1,5 @@
-pip install torch==1.5.0+cpu torchvision==0.6.0+cpu
+torch==1.5.0+cpu 
+torchvision==0.6.0+cpu
 fastai2
 streamlit==0.57.3
 
