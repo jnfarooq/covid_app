@@ -1,5 +1,5 @@
-http://download.pytorch.org/whl/cpu/torch-1.2.0-cp36-cp36m-linux_x86_64.whl
-torchvision==0.4.0
+https://files.pythonhosted.org/packages/e1/17/95f76742a61cbf6e787314eb2e331729db5a3bde6c5924b4ebd9174bea54/torch-1.4.0-cp36-none-macosx_10_9_x86_64.whl
+torchvision==0.5.0
 fastai2
 streamlit==0.57.3
 
