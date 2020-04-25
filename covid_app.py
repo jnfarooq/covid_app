@@ -145,6 +145,17 @@ def load_page():
 
             mult, xb_im = display_results(learn_inf, file_name, y)
             show_heatmap(mult, xb_im, img)
+
+            results = {}
+            for k,v in label_dict.items():
+                # print(k, v)
+                results[v] = d.numpy()[k]
+            # print(type(results.keys()))
+            # print(results.values())
+            plt.figure(figsize=(8,2))
+            plt.barh(list(results.keys()), list(results.values()))
+            plt.xlabel('Confidence')
+            st.pyplot()
  
 load_page()
 
