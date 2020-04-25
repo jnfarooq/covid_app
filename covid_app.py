@@ -132,7 +132,10 @@ def load_page():
 
         img_np = np.array(img)
         # print(img_np.shape)
-        pred, y, _ = learn_inf.predict(img_np)
+        pred, y, prob = learn_inf.predict(img_np)
+        results = {}
+        for k,v in label_dict.items():
+            results[v] = prob.numpy()[k]
         st.write("Click **Predict**")
 
         # _,(ax1, ax) = plt.subplots(1,2, figsize=(20,15))
@@ -146,12 +149,6 @@ def load_page():
             mult, xb_im = display_results(learn_inf, file_name, y)
             show_heatmap(mult, xb_im, img)
 
-            results = {}
-            for k,v in label_dict.items():
-                # print(k, v)
-                results[v] = d.numpy()[k]
-            # print(type(results.keys()))
-            # print(results.values())
             plt.figure(figsize=(8,2))
             plt.barh(list(results.keys()), list(results.values()))
             plt.xlabel('Confidence')
