@@ -11,7 +11,7 @@ from fastai2.vision.all import load_learner, DataBlock, ImageBlock, get_image_fi
 n=512
 label_dict = {0:'COVID-19',
                 1:'NORMAL', 
-                2:'Viral Pneumonia'}
+                2:'Pneumonia'}
 
 # st.title('Uploaded Image')
 # st.write('Hey, whats up')
